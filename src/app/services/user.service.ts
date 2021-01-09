@@ -25,7 +25,7 @@ export class UserService {
   }
 
   login(email: string, password: string) {
-    return this.http.post<UserToken>(`localhost:3000/users/login`, {email, password})
+    return this.http.post<UserToken>(`http://localhost:3000/users/login`, {email, password})
     .pipe(
       map(token => {
         const userToken: UserToken = token;
